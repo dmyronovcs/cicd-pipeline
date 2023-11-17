@@ -33,8 +33,8 @@ pipeline {
                 script {
                     // Test the Docker image
 		            sh '''
-		                docker run --rm -d -p 3001:3000 --name nd1 dmyronovcs/nodedev:v1.0 && sleep 20 && curl localhost:3001
-		                docker container stop nd1
+		                docker run --rm -d -p 3001:3000 --name nd2 dmyronovcs/nodedev:v1.0 && sleep 20 && curl localhost:3001
+		                docker container stop nd2
 		            '''
                 }
             }
